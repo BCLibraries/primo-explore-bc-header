@@ -1,0 +1,11 @@
+{
+  "name": "primo-explore-bc-header",
+  "version": "0.0.1",
+  "description": "BC Libraries header for Primo",
+  "main": "js/header.js",
+  "keywords": [
+    "primo"
+  ],
+  "author": "Luke Gaudreau",
+  "license": "GPL-3.0"
+}

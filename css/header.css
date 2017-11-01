@@ -1,0 +1,7 @@
+/* Header */
+prm-logo div.top-nav-bar {
+  display: none;
+}
+prm-logo div.bc-top-nav-bar {
+display: flex;
+}
