@@ -1,5 +1,5 @@
 
-/* Header */
+/* BC Header */
 prm-topbar {
   height: inherit;
 }
@@ -20,13 +20,13 @@ prm-topbar div.top-nav-bar {
   min-height: inherit;
   background-color: #685c53;
 }
-prm-topbar div.top-nav-bar prm-logo{
+prm-topbar div.top-nav-bar prm-logo {
   display: none;
 }
 prm-topbar .md-button {
   padding: 0 .75em;
   max-width: 12em;
-  font-size: .75em;
+  font-size: .85em;
 }
 prm-topbar .md-button, .md-button.button-over-dark {
   background-color: #555555;
@@ -42,22 +42,34 @@ prm-topbar .md-button, .md-button.button-over-dark {
 
 /* Main Menu */
 prm-main-menu + div {
-  display: none; /* effectively shifts main menu to the right */
+  display: none; 
+}
+prm-main-menu #mainMenu {
+  justify-content: flex-end;
+}
+
+prm-main-menu[menu-type="menu"] .md-button {
+  font-size: 0.85em;
 }
 /* User Area */
 prm-user-area {
   display: flex;
   box-sizing: border-box;
 }
-prm-user-area, prm-user-area .user-menu-button .user-name, prm-user-area md-fab-toolbar md-toolbar, prm-user-area md-fab-toolbar .md-fab-action-item .md-button {
-  background-color: #685c53 !important;
+
+prm-user-area .user-menu-button .user-name {
+  display: flex;
 }
-prm-user-area:hover, prm-user-area .user-menu-button .user-name:hover, prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover {  
-background-color: rgba(0,0,0,.1);
+prm-user-area .user-menu-button .user-name {
+  background: inherit;
 }
-prm-user-area .user-menu-button {
-  /* display: none; */
+prm-user-area,  prm-user-area md-fab-toolbar md-toolbar, prm-user-area md-fab-toolbar .md-fab-action-item .md-button {
+  background-color: #685c53;
 }
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover {  
+  background-color: rgba(0,0,0,.1);
+}
+
 prm-user-area md-fab-toolbar {
   top: 42px;
   height: 60px;
@@ -66,8 +78,8 @@ prm-user-area md-fab-toolbar {
 prm-user-area md-fab-toolbar ._md-fab-toolbar-wrapper {
   height: 60px;
 }
-prm-topbar .md-button, prm-user-area .md-button {
-    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+prm-topbar .md-button, prm-user-area .md-button div {
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 prm-topbar .md-button.md-icon-button {
