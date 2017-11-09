@@ -1,16 +1,9 @@
 angular
 	.module('bc-header', [])
-	.controller('prmTopBarAfterController', [function () {
-		var vm = this;
-		vm.getIconLink = getIconLink;
-		function getIconLink() {
-			return vm.parentCtrl.iconLink;
-		}
+	.controller('prmTopBarBeforeController', [function () {
 	}])
-
-	.component('prmTopBarAfter',{
-		bindings: {parentCtrl: '<'},
-		controller: 'prmTopBarAfterController',
+	.component('prmTopBarBefore', {
+		bindings: { parentCtrl: '<' },
+		controller: 'prmTopBarBeforeController',
 		templateUrl: `primo-explore-bc-header/html/header.html`
-	});
-
+	})

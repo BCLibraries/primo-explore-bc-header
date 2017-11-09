@@ -1,144 +1,61 @@
-<div class="bc-top-nav-bar layout-row" layout="row" tabindex="0" role="banner">
+<div id="bclib-header" class="hide-search bc-top-nav-bar layout-row" tabindex="0" role="banner">
     <prm-skip-to tabindex="0">
-	<!---->
-	<a class="md-button md-primoExplore-theme md-ink-ripple" ng-transclude="" href="" tabindex="0" ng-repeat="link in $ctrl.skipLinks track by link" (click)="$ctrl.scrollToElementId(link)" aria-label="Skip To Main Menu">
-	    <span translate="">Skip To Main Menu</span>
-	</a>
-	<!---->
-	<a class="md-button md-primoExplore-theme md-ink-ripple" ng-transclude="" href="" tabindex="0" ng-repeat="link in $ctrl.skipLinks track by link" (click)="$ctrl.scrollToElementId(link)" aria-label="Skip To Search">
-	    <span translate="">Skip To Search</span>
-	</a>
-	<!---->
-	<prm-skip-to-after parent-ctrl="$ctrl"></prm-skip-to-after>
+        <!---->
+        <a class="md-button md-primoExplore-theme md-ink-ripple" ng-transclude="" href="" tabindex="0" ng-repeat="link in $ctrl.skipLinks track by link"
+            (click)="$ctrl.scrollToElementId(link)" aria-label="Skip To Main Menu">
+            <span translate="">Skip To Main Menu</span>
+        </a>
+        <!---->
+        <a class="md-button md-primoExplore-theme md-ink-ripple" ng-transclude="" href="" tabindex="0" ng-repeat="link in $ctrl.skipLinks track by link"
+            (click)="$ctrl.scrollToElementId(link)" aria-label="Skip To Search">
+            <span translate="">Skip To Search</span>
+        </a>
+        <!---->
+        <prm-skip-to-after parent-ctrl="$ctrl"></prm-skip-to-after>
     </prm-skip-to>
-    <prm-logo>
-	<div class="product-logo product-logo-local" layout="row" id="banner" tabindex="0"  role="banner">
-	    <a href="https://library.bc.edu">
-		<img class="logo-image" alt="{{::(&apos;nui.header.LogoAlt&apos; | translate)}}" ng-src="{{$ctrl.getIconLink()}}" width="130" />
-	    </a>
-	</div>
-	<prm-logo-after parent-ctrl="$ctrl"> </prm-logo-after>
-    </prm-logo>
-    <div flex="50" hide-xs="" class="hide-xs flex-50"></div>
-    <!---->
-    <prm-main-menu role="navigation" ng-if="::$ctrl.showMainMenu" menu-type="menu" flex="50" hide-xs="" class="hide-xs flex-50">
-	<!---->
-	<div class="layout-full-height" ng-include="::$ctrl.templateUrl">
-	    <div class="top-nav-bar-links buttons-group layout-align-center-center layout-row flex-100" id="mainMenu" layout="row" role="list" layout-align="center center" flex="100">
-		<!---->
-		<a class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column" ng-transclude="" role="listitem" href="" layout="column" layout-align="center center" (click)="::$ctrl.updateUrl(urlConfig)" ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" ng-disabled="$ctrl.dispalyResourceSharing(urlConfig.url)" ng-hide="$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)" aria-label="New Search" aria-hidden="false" tabindex="0">
-		    <span class="item-content" translate="mainmenu.label.new_search">New Search</span>
-		</a>
-		<!---->
-		<a class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column" ng-transclude="" role="listitem" href="" layout="column" layout-align="center center" (click)="::$ctrl.updateUrl(urlConfig)" ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" ng-disabled="$ctrl.dispalyResourceSharing(urlConfig.url)" ng-hide="$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)" aria-label="Databases" aria-hidden="false" tabindex="0">
-		    <span class="item-content" translate="mainmenu.label.databases">Databases</span>
-		</a>
-		<!---->
-		<a class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column" ng-transclude="" role="listitem" href="" layout="column" layout-align="center center" (click)="::$ctrl.updateUrl(urlConfig)" ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" ng-disabled="$ctrl.dispalyResourceSharing(urlConfig.url)" ng-hide="$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)" aria-label="Research Guides" aria-hidden="false" tabindex="0">
-		    <span class="item-content" translate="mainmenu.label.research_guides">Research Guides</span>
-		</a>
-		<!---->
-		<a class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column" ng-transclude="" role="listitem" href="" layout="column" layout-align="center center" (click)="::$ctrl.updateUrl(urlConfig)" ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" ng-disabled="$ctrl.dispalyResourceSharing(urlConfig.url)" ng-hide="$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)" aria-label="Get Help" aria-hidden="false" tabindex="0">
-		    <span class="item-content" translate="mainmenu.label.get_help">Get Help</span>
-		</a>
-		<!---->
-		<a class="zero-margin flex-button multi-line-button button-over-dark md-button md-primoExplore-theme md-ink-ripple layout-align-center-center layout-column" ng-transclude="" role="listitem" href="" layout="column" layout-align="center center" (click)="::$ctrl.updateUrl(urlConfig)" ng-repeat="urlConfig in $ctrl.viewUrlsList |limitTo:$ctrl.showCount()" ng-disabled="$ctrl.dispalyResourceSharing(urlConfig.url)" ng-hide="$ctrl.hideLegantoMenuLink(urlConfig.url,urlConfig.label)" aria-label="Feedback" aria-hidden="false" tabindex="0">
-		    <span class="item-content" translate="mainmenu.label.feedback">Feedback</span>
-		</a>
-		<!---->
-		<!---->
-		<prm-top-nav-bar-links-after parent-ctrl="$ctrl"></prm-top-nav-bar-links-after>
-	    </div>
-	    <prm-main-menu-after parent-ctrl="$ctrl"></prm-main-menu-after>
-	</div>
-    </prm-main-menu>
-    <!---->
-    <div flex="50" flex-xs="100" class="flex-xs-100 flex-50"></div>
-    <prm-search-bookmark-filter ng-show="$ctrl.displayFavorites" class="view-switcher layout-align-end-center layout-row flex-noshrink" layout-align="end center" layout="row" flex="noshrink" aria-hidden="false">
-	<!---->
-	<a class="md-icon-button button-over-dark md-button md-primoExplore-theme md-ink-ripple" ng-transclude="" ng-if="!$ctrl.isFavorites &amp;&amp; $ctrl.showSearchHistoryTab()" aria-label="Go to search history" ng-click="$ctrl.goToSearchHistory()" ui-state="$ctrl.FAVORITES_STATE" ui-state-params="$ctrl.searchHistoryParams" ui-sref-opts="{reload: true, inherit:false}" href="/primo-explore/favorites?vid=bclib_new&amp;lang=en_US&amp;section=search_history">
-	    <prm-icon aria-label="Go to search history" class="rotate-25" icon-type="svg" svg-icon-set="primo-ui" icon-definition="restore"></prm-icon>
-	</a>
-	<!---->
-	<div id="fixed-buttons-holder" ng-class="{'fixed-to-top': $ctrl.fixedToTop()}" layout="row" layout-align="center center" class="layout-align-center-center layout-row">
-	    <!---->
-	    <!---->
-	    <a class="md-icon-button button-over-dark md-button md-primoExplore-theme md-ink-ripple" ng-transclude="" ng-if="!$ctrl.isFavorites" id="favorites-button" aria-label="Go to my favorites" ng-click="$ctrl.goToFavorties()" ui-state="$ctrl.FAVORITES_STATE" ui-state-params="$ctrl.favoritesStateParams" ui-sref-opts="{reload: true, inherit:false}" href="/primo-explore/favorites?vid=bclib_new&amp;lang=en_US">
-		<prm-icon aria-label="Go to my favorites" class="rotate-25" icon-type="svg" svg-icon-set="primo-ui" icon-definition="prm_pin"></prm-icon>
-	    </a>
-	    <!---->
-	    <!---->
-	</div>
-	<prm-search-bookmark-filter-after parent-ctrl="$ctrl"></prm-search-bookmark-filter-after>
-    </prm-search-bookmark-filter>
-    <prm-user-area>
-	<button class="user-menu-button accessible-only md-button md-primoExplore-theme md-ink-ripple hide-xs" type="button" ng-transclude="" tabindex="-1" aria-label="Open user actions menu button" ng-click="$event.stopPropagation();$ctrl.enableMobileMenu()" hide-xs="">
-	    <div class="user-button-text layout-align-center-start layout-column" layout="column" layout-align="center start">
-		<span class="user-name">Guest </span>
-		<!---->
-	    </div>
-	</button>
-	<button class="user-menu-button md-button md-primoExplore-theme md-ink-ripple hide-xs" type="button" ng-transclude="" aria-hidden="true" aria-label="Open user actions menu button" (click)="$ctrl.changUserStatus()" hide-xs="">
-	    <div class="user-menu-button-loader ng-scope layout-align-center-center layout-row" layout="row" layout-align="center center">
-		<!---->
-	    </div>
-	    <!---->
-	    <div ng-if="!$ctrl.showSpinner()" ng-class="{'user-button-text': $ctrl.userName().length > 0}" layout="column" layout-align="center start" class="layout-align-center-start layout-column">
-		<span class="user-name">Guest </span>
-		<!---->
-	    </div>
-	    <!---->
-	</button>
-	<button class="mobile-menu-button zero-margin md-button md-primoExplore-theme md-ink-ripple hide-gt-xs" type="button" ng-transclude="" aria-label="Open user actions menu button" (click)="$ctrl.enableMobileMenu()" style="min-width: 60px" hide-gt-xs="">
-	    <prm-icon [icon-type]="::$ctrl.topBarIcons.more.type" [svg-icon-set]="::$ctrl.topBarIcons.more.iconSet" [icon-definition]="::$ctrl.topBarIcons.more.icon"></prm-icon>
-	</button>
-	<md-fab-toolbar md-direction="left" md-open="$ctrl.showUserMenu" hide-xs="" class="hide-xs _md-animations-ready md-fab-toolbar md-left">
-	    <div class="_md-fab-toolbar-wrapper">  
-		<div class="_md-fab-toolbar-content" ng-transclude="">
-		    <md-fab-trigger class="align-with-text" ng-class="{'show-user-info': $ctrl.userName().length > 0}" aria-haspopup="true" aria-expanded="false">
-			<button class="button-with-icon zero-margin md-button md-primoExplore-theme md-ink-ripple" type="button" ng-transclude="" aria-hidden="true" aria-label="Open user actions menu button">
-			    <div class="_md-fab-toolbar-background"></div>
-			    <div style="opacity: 0" class="user-button-text layout-align-center-start layout-column" layout="column" layout-align="center start">
-				<span class="user-name">Guest</span> 
-				<!---->
-			    </div>
-			</button>
-		    </md-fab-trigger>
-		    <md-toolbar class="_md md-primoExplore-theme">
-			<md-fab-actions class="md-toolbar-tools zero-padding buttons-group" aria-hidden="true">
-			    <div class="md-fab-action-item">
-				<prm-authentication layout="flex" [is-logged-in]="$ctrl.userName().length > 0" class="layout-row">
-				    <!---->
-				    <button class="button-with-icon zero-margin md-button md-primoExplore-theme md-ink-ripple" type="button" ng-transclude="" ng-if="!$ctrl.isLoggedIn" ng-click="$ctrl.handleLogin();" aria-label="Sign in" tabindex="-1">
-					<prm-icon icon-type="svg" svg-icon-set="primo-ui" icon-definition="sign-in"></prm-icon>
-					<span translate="eshelf.signin.title">Sign in</span>
-				    </button>
-				    <!---->
-				    <!---->
-				    <prm-authentication-after parent-ctrl="$ctrl"></prm-authentication-after>
-				</prm-authentication>
-			    </div>
-			    <div class="md-fab-action-item">
-				<!---->
-			    </div>
-			    <div class="md-fab-action-item">
-				<!---->
-				<prm-library-card-menu ng-if="::$ctrl.showUserArea">
-				    <!---->
-				    <button class="button-with-icon zero-margin md-button md-primoExplore-theme md-ink-ripple" type="button" ng-transclude="" aria-label="Go To My Library Card" (click)="$ctrl.goToMyLibraryCard();" tabindex="-1">
-					<prm-icon [icon-type]="::$ctrl.topBarIcons.library.type" [svg-icon-set]="::$ctrl.topBarIcons.library.iconSet" [icon-definition]="::$ctrl.topBarIcons.library.icon">
-					</prm-icon>
-					<span translate="nui.menu.librarycard">My Library Card</span>
-				    </button>
-				    <prm-library-card-menu-after parent-ctrl="$ctrl"></prm-library-card-menu-after>
-				</prm-library-card-menu>
-				<!---->
-			    </div>
-			</md-fab-actions>
-		    </md-toolbar>
-		</div>
-	    </div>
-	</md-fab-toolbar>
-	<prm-user-area-after parent-ctrl="$ctrl"></prm-user-area-after>
-    </prm-user-area>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-xs-6 col-xxs" id="banner" tabindex="0" role="banner">
+                <a href="https://library.bc.edu" title="Go to Boston College Libraries" class="bclib-header-logo">
+                    <img src="https://library.bc.edu/theme/img/title_295x30_transparent_whitetext.png" id="fakebctitle" alt="Boston College Library Logo"
+                        width="295" height="30">
+                    <p>Boston College Libraries</p>
+                </a>
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-6 col-xxs header-right">
+                <div class="col-md-7 col-sm-7 col-xs-7 col-xxs link-wrapper">
+                    <ul class="bclib-header-links">
+                        <li>
+                            <a href="https://bc.edu">BC Home</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bc.edu/bc-web/about/mission.html">Mission</a>
+                        </li>
+                        <li>
+                            <a href="https://libguides.bc.edu/feedback">
+                                <span class="fa fa-commenting-o" aria-hidden="true"></span> Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 col-xxs input-wrapper">
+                    <div class="pull-right">
+                        <form action="https://www.bc.edu/bc-web/search.html">
+                            <div class="input-group" id="bclib-header-form">
+                                <label for="bclib-header-search" class="accessibility-text">Search the Library</label>
+                                <input type="hidden" ie="UTF-8" />
+                                <input type="text" id="bclib-header-search" class="form-control" name="q" placeholder="Search bc.edu">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                        <span class="accessibility-text">Submit Search</span>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
