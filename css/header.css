@@ -64,7 +64,7 @@ prm-user-area .user-menu-button .user-name {
   background: inherit;
 }
 prm-user-area,  prm-user-area md-fab-toolbar md-toolbar, prm-user-area md-fab-toolbar .md-fab-action-item .md-button {
-  background-color: #685c53;
+  background-color: #685c53 !important;
 }
 prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover {  
   background-color: rgba(0,0,0,.1);
