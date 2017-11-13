@@ -16,6 +16,7 @@ a.bclib-header-logo:hover, .bclib-header-links a:hover {
 }
 
 /* Primo Navigation */
+
 prm-topbar div.top-nav-bar {
   height: 60px;
   min-height: inherit;
@@ -74,21 +75,20 @@ prm-user-area .user-menu-button .user-name {
 prm-user-area .user-menu-button .user-name {
   background: inherit;
 }
-prm-user-area,  prm-user-area md-fab-toolbar md-toolbar, prm-user-area md-fab-toolbar .md-fab-action-item .md-button, prm-user-area md-fab-toolbar.md-is-open md-fab-trigger ._md-fab-toolbar-background {
+prm-topbar, prm-user-area,  prm-user-area md-fab-toolbar md-toolbar, prm-user-area md-fab-toolbar .md-fab-action-item .md-button, prm-user-area md-fab-toolbar.md-is-open md-fab-trigger ._md-fab-toolbar-background {
   background-color: #685c53 !important;
 }
-prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover {  
-  background-color: rgba(0,0,0,.1);
+
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover, prm-user-area prm-library-card{  
+  background-color: rgba(0,0,0,.1) !important;
 }
 
 prm-user-area md-fab-toolbar {
-  top: 42px;
+  top: 63px;
   height: 60px;
   min-height: 60px;
 }
-prm-user-area md-fab-toolbar ._md-fab-toolbar-wrapper {
-  height: 60px;
-}
+
 prm-topbar .md-button {
   box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
 }
@@ -98,6 +98,9 @@ prm-user-area .md-button div {
 }
 prm-user-area .md-button:not(.md-icon-button) {
   margin-left: 1px !important;
+}
+prm-user-area prm-authentication {
+  margin-right: 1px;
 }
 prm-topbar .md-button.md-icon-button {
   margin: 0;
@@ -124,4 +127,48 @@ prm-search-bookmark-filter {
 }
 #favorites-button::after {
   content: "Favorites";
+}
+
+/* Breakpoints */
+
+prm-user-area md-fab-toolbar {
+  left: 50%;
+}
+prm-user-area md-fab-toolbar ._md-fab-toolbar-wrapper {
+  left: -50%;
+}
+
+/* 1584 */
+prm-topbar div.top-nav-bar {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 1590 */
+@media (min-width: 768px) {
+  prm-topbar div.top-nav-bar {
+      width: inherit;
+  }
+}
+
+/* 1595 */
+@media (min-width: 992px) {
+  prm-topbar div.top-nav-bar, prm-user-area md-fab-toolbar {
+      width: 970px;
+  }
+  prm-user-area md-fab-toolbar {
+    top: 42px;
+  }
+}
+
+/* 1600 */
+@media (min-width: 1200px) {
+  prm-topbar div.top-nav-bar, prm-user-area md-fab-toolbar {
+      width: 1170px;
+  }
+  prm-user-area md-fab-toolbar {
+    top: 42px;
+  }
 }
