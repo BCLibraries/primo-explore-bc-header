@@ -47,9 +47,19 @@ prm-main-menu + div {
 prm-main-menu #mainMenu {
   justify-content: flex-end;
 }
-
-prm-main-menu[menu-type="menu"] .md-button {
+prm-main-menu #mainMenu * {
+  display: none;
+}
+prm-main-menu #mainMenu a:first-of-type,  prm-main-menu #mainMenu a:first-of-type * {
+  display: flex; !important
+}
+/* Font Sizes */
+prm-main-menu[menu-type="menu"] .md-button, prm-user-area .md-button, .md-button {
   font-size: 0.85em;
+}
+prm-library-card-menu .md-button, prm-authentication .md-button {
+  font-size: 1em;
+  line-height: 24px;
 }
 /* User Area */
 prm-user-area {
@@ -80,6 +90,10 @@ prm-user-area md-fab-toolbar ._md-fab-toolbar-wrapper {
 }
 prm-topbar .md-button, prm-user-area .md-button div {
   box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+prm-user-area .md-button div {
+  align-items: center;
 }
 
 prm-topbar .md-button.md-icon-button {
