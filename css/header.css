@@ -88,14 +88,16 @@ prm-user-area md-fab-toolbar {
 prm-user-area md-fab-toolbar ._md-fab-toolbar-wrapper {
   height: 60px;
 }
-prm-topbar .md-button, prm-user-area .md-button div {
+prm-topbar .md-button {
   box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 prm-user-area .md-button div {
   align-items: center;
 }
-
+prm-user-area .md-button:not(.md-icon-button) {
+  margin-left: 1px !important;
+}
 prm-topbar .md-button.md-icon-button {
   margin: 0;
   padding: 8px 24px;
