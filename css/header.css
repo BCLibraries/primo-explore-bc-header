@@ -64,15 +64,6 @@ prm-main-menu #mainMenu {
     justify-content: flex-end;
 }
 
-prm-main-menu #mainMenu * {
-    display: none;
-}
-
-prm-main-menu #mainMenu a:first-of-type,
-prm-main-menu #mainMenu a:first-of-type * {
-    display: flex !important;
-}
-
 
 /* Font Sizes */
 
