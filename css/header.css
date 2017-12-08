@@ -110,6 +110,7 @@ prm-user-area prm-library-card {
 
 prm-user-area md-fab-toolbar {
     top: 63px;
+    left: 0;
     height: 60px;
     min-height: 60px;
 }
@@ -165,19 +166,9 @@ prm-search-bookmark-filter {
 }
 
 
-/* Breakpoints */
-
-prm-user-area md-fab-toolbar {
-    left: 50%;
-}
-
-prm-user-area md-fab-toolbar ._md-fab-toolbar-wrapper {
-    left: -50%;
-}
-
-
 /* 1584 */
 
+prm-user-area md-fab-toolbar,
 prm-topbar div.top-nav-bar {
     padding-right: 15px;
     padding-left: 15px;
